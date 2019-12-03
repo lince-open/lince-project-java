@@ -3,8 +3,11 @@ package work.lince.project.service
 import spock.lang.Ignore
 import spock.lang.Specification
 import spock.lang.Unroll
+import work.lince.project.authentication.AuthenticationService
+import work.lince.project.model.Project
+import work.lince.project.model.ProjectStatus
 import work.lince.project.repository.ProjectRepository
-@Ignore
+
 class ProjectServiceSpec extends Specification {
 
     ProjectService service;
@@ -12,45 +15,40 @@ class ProjectServiceSpec extends Specification {
     def setup() {
         service = Spy(ProjectService)
         service.repository = Mock(ProjectRepository)
+        service.authenticationService = Mock(AuthenticationService)
+
     }
 
     @Unroll
-    def "verify with #value"() {
+    def "verify with #title"() {
         given:
-            service.repository.findByValue(_) >> {
-                Optional.empty()
+            1 * service.repository.save(_) >> { Project value ->
+                value.id = id
+                return value
             }
-
+            1 * service.authenticationService.getAuthenticatedUser() >> { user }
+            def project = new Project(
+                title: title,
+                status: status,
+                owner: owner
+            )
         when:
-            def result = service.analyze(value)
+            def result = service.create(project)
 
         then:
-            result == expected
+            result != null
+            result.id == id
+            result.title == title
+            result.owner == user
+            result.status == ProjectStatus.CREATED
 
         where:
-            value      || expected
-            "{"        || -1
-            "{{}"      || -1
-            "}"        || -1
-            "}}{"      || -1
-            "{}}"      || -1
-            "{ }"      || -1
-            "{}a"      || -1
-            "{} "      || -1
-            ""         || 0
-            "{}"       || 0
-            "{}{}"     || 0
-            "{{}}"     || 0
-            "{{}{}}"   || 0
-            "}}"       || 1
-            "{{{}"     || 1
-            "{{{{{}"   || 2
-            "{{{{"     || 2
-            "}}}}"     || 2
-            "}{}{}{}{" || 2
-            "}{"       || 2
-            "}{{{"     || 3
-            "}{{{{{"   || 4
+            title             | status               | owner      | user   | id
+            "Project Title 1" | null                 | "asdfasdf" | "asdf" | 1L
+            "Project Title 2" | ProjectStatus.CLOSED | null       | "qwer" | 2L
+            "Project Title 3" | null                 | null       | "asdf" | 3L
+            "Project Title 4" | ProjectStatus.CLOSED | "asdfasdf" | "qwer" | 4L
+
 
     }
 
