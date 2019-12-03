@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  jackson:
+    default-property-inclusion: non_null
+
+  datasource:
+    url: jdbc:h2:mem:example
+    platform: h2
