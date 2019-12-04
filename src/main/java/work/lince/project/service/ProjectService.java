@@ -1,18 +1,18 @@
 package work.lince.project.service;
 
-import org.aspectj.weaver.ast.Not;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import work.lince.commons.exception.NotFoundException;
 import work.lince.project.authentication.AuthenticationService;
 import work.lince.project.model.Project;
 import work.lince.project.model.ProjectStatus;
 import work.lince.project.repository.ProjectRepository;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+/**
+ * @author pzatta
+ */
 
 @Slf4j
 @Service

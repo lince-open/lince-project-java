@@ -12,6 +12,10 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author pzatta
+ */
+
 @Slf4j
 @Component
 public class AuthentiationProvider implements AuthenticationProvider {
