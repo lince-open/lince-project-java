@@ -10,9 +10,6 @@ import work.lince.project.model.ProjectStatus;
 import work.lince.project.repository.ProjectRepository;
 
 import java.util.List;
-/**
- * @author pzatta
- */
 
 @Slf4j
 @Service

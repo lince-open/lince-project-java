@@ -11,10 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 
-/**
- * @author pzatta
- */
-
 @RestController
 @RequestMapping(path = {"/","/health"}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class HealthController {
