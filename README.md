@@ -7,6 +7,8 @@ Quando um projeto é adicionado, o usuário autenticado é registrado como owner
 * Autenticação com Spring Security e uso de Header
 * Testes Unitários com JUnit/Spock/Groove
 * Testes Funcionais com JUnit/Spock/Groove
+* Swagger2
+* Docker
 
 ## Docker
 mvn clean package dockerfile:build
