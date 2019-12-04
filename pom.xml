@@ -5,7 +5,7 @@
 
     <groupId>lince-open</groupId>
     <artifactId>lince-project</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,6 +18,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <sonar.tests>src/test/groovy,src/test/java</sonar.tests>
+        <sonar.projectKey>lince-open_lince-project-java</sonar.projectKey>
+        <sonar.organization>lince-open</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>e16df41988e3c356bc22715438ff417160c580ae</sonar.login>
     </properties>
 
     <dependencies>
