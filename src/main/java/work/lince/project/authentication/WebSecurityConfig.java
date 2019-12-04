@@ -8,13 +8,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-@Slf4j
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    protected AuthentiationProvider customAuthProvider;
+    protected DefaultAuthenticationProvider customAuthProvider;
 
     @Autowired
     protected AuthenticationFilter authenticationFilter;
