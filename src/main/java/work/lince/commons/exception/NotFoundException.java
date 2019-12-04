@@ -3,9 +3,6 @@ package work.lince.commons.exception;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
-/**
- * @author pzatta
- */
 
 @NoArgsConstructor
 @ResponseStatus(HttpStatus.NOT_FOUND)

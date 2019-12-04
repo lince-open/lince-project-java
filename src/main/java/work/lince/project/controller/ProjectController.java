@@ -16,10 +16,6 @@ import work.lince.project.service.ProjectService;
 
 import java.util.List;
 
-/**
- * @author pzatta
- */
-
 @RestController
 @RequestMapping(path = "/projects")
 public class ProjectController {
