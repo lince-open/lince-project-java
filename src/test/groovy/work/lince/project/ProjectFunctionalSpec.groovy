@@ -1,6 +1,5 @@
 package work.lince.project
 
-
 import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import org.springframework.beans.factory.annotation.Autowired
@@ -12,6 +11,9 @@ import spock.lang.Unroll
 import work.lince.project.model.Project
 import work.lince.project.model.ProjectStatus
 import work.lince.project.repository.ProjectRepository
+/**
+ * @author pzatta
+ */
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ProjectFunctionalSpec extends Specification {
