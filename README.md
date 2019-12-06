@@ -10,9 +10,17 @@ Quando um projeto é adicionado, o usuário autenticado é registrado como owner
 * Swagger2
 * Docker
 
-## Docker
+## Docker Hub
+
+https://hub.docker.com/repository/docker/linceopen/lince-project
+
 mvn clean package dockerfile:build
+
 docker run  --name lince-project -p 8080:8080 -t lince-open/lince-project:latest
+
+docker tag lince-open/lince-project:latest linceopen/lince-project:latest
+
+docker push linceopen/lince-project:latest
 
 ## Execução
 mvn spring-boot:run
