@@ -15,6 +15,7 @@ Quando um projeto é adicionado, o usuário autenticado é registrado como owner
 
 ## Docker
 mvn clean package dockerfile:build
+
 docker run  --name lince-project -p 8080:8080 -t lince-open/lince-project:latest
 
 ## Execução
