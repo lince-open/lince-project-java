@@ -11,6 +11,7 @@ Quando um projeto é adicionado, o usuário autenticado é registrado como owner
 * Docker
 
 ![](https://github.com/lince-open/lince-project-java/workflows/Java%20CI/badge.svg)
+[![Known Vulnerabilities](https://snyk.io/test/github/lince-open/lince-project-java/badge.svg)](https://snyk.io/test/github/pedrozatta/lince-project-java)
 
 
 ## Docker
