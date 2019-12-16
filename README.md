@@ -10,11 +10,8 @@ Quando um projeto é adicionado, o usuário autenticado é registrado como owner
 * Swagger2
 * Docker
 
-[![][Build Status img]][Build Status]
-[![][Coverage Status img]][Coverage Status]
-[![][license img]][license]
-[![][Maven Central img]][Maven Central]
-[![][Javadocs img]][Javadocs]
+![](https://github.com/lince-open/lince-project-java/workflows/Java%20CI/badge.svg)
+
 
 ## Docker
 mvn clean package dockerfile:build
