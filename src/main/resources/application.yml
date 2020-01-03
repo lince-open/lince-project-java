@@ -8,3 +8,4 @@ spring:
   datasource:
     url: jdbc:h2:mem:example
     platform: h2
+    pool-size: 10

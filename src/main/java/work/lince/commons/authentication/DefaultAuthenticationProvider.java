@@ -1,6 +1,5 @@
-package work.lince.project.authentication;
+package work.lince.commons.authentication;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
