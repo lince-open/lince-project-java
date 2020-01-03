@@ -1,4 +1,4 @@
-package work.lince.project.authentication;
+package work.lince.commons.authentication;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
+@Slf4j
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -21,7 +22,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable();
-        http.authorizeRequests().antMatchers("**").authenticated();
+        http.authorizeRequests().anyRequest().authenticated();
         http.addFilterBefore(authenticationFilter, BasicAuthenticationFilter.class)
                 .addFilterAfter(authenticationFilter, BasicAuthenticationFilter.class)
                 .authenticationProvider(customAuthProvider);

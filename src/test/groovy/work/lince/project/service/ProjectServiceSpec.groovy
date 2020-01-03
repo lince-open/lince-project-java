@@ -2,7 +2,7 @@ package work.lince.project.service
 
 import spock.lang.Specification
 import spock.lang.Unroll
-import work.lince.project.authentication.AuthenticationService
+import work.lince.commons.authentication.AuthenticationService
 import work.lince.project.model.Project
 import work.lince.project.model.ProjectStatus
 import work.lince.project.repository.ProjectRepository
