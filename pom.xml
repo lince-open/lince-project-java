@@ -5,7 +5,7 @@
 
     <groupId>lince-open</groupId>
     <artifactId>lince-project</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.8</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,7 +21,6 @@
         <sonar.projectKey>lince-open_lince-project-java</sonar.projectKey>
         <sonar.organization>lince-open</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.login>e16df41988e3c356bc22715438ff417160c580ae</sonar.login>
     </properties>
 
     <dependencies>
@@ -38,6 +37,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>work.lince</groupId>
+            <artifactId>lince-commons</artifactId>
+            <version>0.0.1</version>
         </dependency>
 
         <dependency>
