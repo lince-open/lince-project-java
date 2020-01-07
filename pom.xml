@@ -42,25 +42,25 @@
         <dependency>
             <groupId>work.lince</groupId>
             <artifactId>lince-commons-swagger</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
 
         <dependency>
             <groupId>work.lince</groupId>
             <artifactId>lince-commons-authentication</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
 
         <dependency>
             <groupId>work.lince</groupId>
             <artifactId>lince-commons-health</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
 
         <dependency>
             <groupId>work.lince</groupId>
             <artifactId>lince-commons-exception</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
 
         <dependency>
