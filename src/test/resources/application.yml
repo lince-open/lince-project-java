@@ -1,6 +1,3 @@
-server:
-  port: 8080
-
 spring:
   jackson:
     default-property-inclusion: non_null
@@ -8,3 +5,27 @@ spring:
   datasource:
     url: jdbc:h2:mem:example
     platform: h2
+
+management:
+  endpoints:
+    web:
+      base-path: /internal
+      exposure:
+        include: "*"
+  info:
+    git:
+      mode: full
+
+info:
+  encoding: UTF-8
+  hostName: lince-test-host
+  java:
+    source: 1.8.0
+    target: 1.8.0
+    vendor: ${java.specification.vendor}
+    vmName: ${java.vm.name}
+    runtimeVersion: ${java.runtime.version}
+  maven:
+    groupId: groupId
+    artifactId: artifactId
+    version: version
