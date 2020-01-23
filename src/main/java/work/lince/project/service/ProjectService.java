@@ -31,6 +31,12 @@ public class ProjectService {
         return repository.findAll();
     }
 
+
+    public Project findById(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new NotFoundException());
+    }
+
     public void remove(Long id) {
         Project project = repository.findById(id)
                 .orElseThrow(() -> new NotFoundException());
