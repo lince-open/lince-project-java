@@ -35,6 +35,12 @@ public class ProjectController {
         return service.findAll();
     }
 
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Project findById(@PathVariable("id") final Long id) {
+        return service.findById(id);
+    }
+
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void remove(@PathVariable("id") final Long id) {
