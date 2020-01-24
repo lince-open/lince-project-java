@@ -1,0 +1,23 @@
+management:
+  endpoints:
+    web:
+      base-path: /internal
+      exposure:
+        include: "*"
+  info:
+    git:
+      mode: full
+
+info:
+  encoding: @project.build.sourceEncoding@
+  hostName: ${HOSTNAME:lince-host}
+  java:
+    source: @java.version@
+    target: @java.version@
+    vendor: ${java.specification.vendor}
+    vmName: ${java.vm.name}
+    runtimeVersion: ${java.runtime.version}
+  maven:
+    groupId: @project.groupId@
+    artifactId: @project.artifactId@
+    version: @project.version@
