@@ -98,10 +98,29 @@
             <version>2.6</version>
         </dependency>
 
-        <dependency>
+               <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <!-- Charles Müller instanciando a versão que não existia causando erro-->
+            <version>1.18.20</version>
         </dependency>
+            <!-- Charles müller - Instanciando o Swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
 
         <!-- Start Test dependencies -->
         <dependency>
