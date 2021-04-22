@@ -46,11 +46,11 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>work.lince</groupId>
-            <artifactId>lince-commons-swagger</artifactId>
-            <version>0.0.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>work.lince</groupId>-->
+<!--            <artifactId>lince-commons-swagger</artifactId>-->
+<!--            <version>0.0.1</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>work.lince</groupId>
