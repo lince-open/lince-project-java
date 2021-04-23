@@ -10,6 +10,7 @@ import work.lince.project.model.ProjectStatus;
 import work.lince.project.repository.ProjectRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -33,11 +34,12 @@ public class ProjectService {
 
 
     public Project findById(Long id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new NotFoundException());
+        Optional<Project> obj = repository.findById(id);
+        return obj.orElse(null);
     }
 
-    public void remove(Long id) {
+
+   public void remove(Long id) {
         Project project = repository.findById(id)
                 .orElseThrow(() -> new NotFoundException());
         repository.delete(project);
