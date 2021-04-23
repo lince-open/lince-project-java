@@ -20,7 +20,7 @@ public class Tasks implements Serializable {
 
     @Column(name = "DESCRIPTION",length = 250)
     private String description;
-
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "project_id")
     private Project project;
@@ -60,7 +60,9 @@ public class Tasks implements Serializable {
         this.description = description;
     }
 
-
+    public Project getProject() {
+        return project;
+    }
 
     public void setProject(Project project) {
         this.project = project;
